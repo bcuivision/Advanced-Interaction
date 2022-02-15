@@ -1,0 +1,266 @@
+#nav
+{
+  font-weight: light;
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 0 10px 100px 0 rgba(255, 255, 255, 0.726);
+  border-bottom: solid 3px rgb(255, 0, 0);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  width: 80px;
+  display: block;
+  text-align: center;
+  padding: 25px 16px;
+  /* margin: 25px 15px; */
+  text-decoration: none;
+}
+
+li a
+{
+  text-decoration: unset;
+  color: unset;
+}
+
+li:hover 
+{
+  font-weight: bold;
+}
+
+#spin:hover
+{
+  transform: rotateY(360deg);
+  transition: all 1s;
+}
+
+
+body{
+  margin: 0;
+  /* background-color: red; */
+  font-family: 'Inter', sans-serif;
+  
+}
+
+audio
+{
+  display: none;
+}
+
+.container {
+  background: rgb(69,91,177);
+  background: linear-gradient(9deg, rgba(69,91,177,1) 0%, rgba(158,219,60,1) 100%);
+  
+  position:absolute;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col
+{
+  transition: all 1s;
+}
+
+
+.box {
+  border: dotted .5px white;
+  height:11%;
+  width: 100%;
+  transition: all 1s;
+  /* transition: width 4s, height 4s; */
+
+  background-color: black;
+  box-shadow: 0 10px 50px 0 rgba(255, 255, 255, 0.397);
+
+  cursor: url("/Users/briancui/Desktop/Advanced Interaction/Project 1/smallwhitehammer.png"), pointer;
+  /* use gradient, variety for different boxes */
+  /* filter: drop-shadow(30px 10px 40px #4444dd); */
+}
+
+.box:hover
+{
+  background-color: rgb(229, 255, 0);
+  transition: width 4s, height 4s;
+}
+
+.clock {
+  color: red;
+  font-size: 100px;
+  text-align: center;
+  text-shadow: 0 0 30px #8DCAED;
+/*   animation: shift-clock 8s infinite; */
+}
+
+@media(max-width: 1400px)
+{
+
+  /* .box
+  {
+    width:200%;
+    border-radius: 10%;
+  } */
+
+  .col:nth-child(odd)
+  {
+    transform: rotateZ(75deg);
+  }
+
+  .col:nth-child(even)
+  {
+    transform: rotateZ(-75deg);
+  }
+}
+
+@media(max-width: 1200px)
+{
+
+  /* .box
+  {
+    width:300%;
+    border-radius: 20%;
+  } */
+
+  .col:nth-child(odd)
+  {
+    transform: rotateZ(150deg);
+  }
+
+  .col:nth-child(even)
+  {
+    transform: rotateZ(-150deg);
+  }
+}
+
+
+@media(max-width: 1000px)
+{
+
+  /* .box
+  {
+    width:400%;
+    border-radius: 30%;
+  } */
+
+  .col:nth-child(odd)
+  {
+    transform: rotateZ(225deg);
+  }
+
+  .col:nth-child(even)
+  {
+    transform: rotateZ(-225deg);
+  }
+}
+
+@media(max-width: 800px)
+{
+
+  /* .box
+  {
+    width:500%;
+    border-radius: 40%;
+  } */
+
+  .col:nth-child(odd)
+  {
+    transform: rotateZ(300deg);
+  }
+
+  .col:nth-child(even)
+  {
+    transform: rotateZ(-300deg);
+  }
+}
+
+@media(max-height: 900px)
+{
+
+  .box
+  {
+    height:22%;
+  }
+
+  .col:nth-child(odd)
+  {
+    transform: rotateY(75deg);
+  }
+
+  .col:nth-child(even)
+  {
+    transform: rotateZ(-75deg);
+  } 
+}
+
+@media(max-height: 700px)
+{
+
+  .box
+  {
+    height:33%;
+  }
+
+  .col:nth-child(odd)
+  {
+    transform: rotateY(150deg);
+  }
+
+  .col:nth-child(even)
+  {
+    transform: rotateZ(-150deg);
+  } 
+}
+
+@media(max-height: 500px)
+{
+
+  .box
+  {
+    height:44%;
+  }
+
+  .col:nth-child(odd)
+  {
+    transform: rotateY(225deg);
+  }
+
+  .col:nth-child(even)
+  {
+    transform: rotateZ(-225deg);
+  } 
+}
+
+@media(max-height: 300px)
+{
+
+  .box
+  {
+    height:55%;
+  }
+
+  .col:nth-child(odd)
+  {
+    transform: rotateY(300deg);
+  }
+
+  .col:nth-child(even)
+  {
+    transform: rotateZ(-300deg);
+  } 
+}

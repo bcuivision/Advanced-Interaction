@@ -1,0 +1,131 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+}
+
+#header
+{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    min-width: 751px;
+    margin: auto;
+
+    font-size: 90pt;
+}
+
+#header p
+{
+    padding: unset;
+    margin: unset;
+    font-weight: bold;
+    position: absolute;
+}
+
+#line1
+{
+    animation: slideUp 2s ease-out forwards;
+    animation-delay: 3.5s;
+}
+
+#line2
+{
+    animation: slideDown 2s ease-out forwards;
+    animation-delay: 3.5s;
+}
+
+#context
+{
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /* min-width: 350px;
+    max-width: 500px;
+    margin: auto; */
+    opacity: 0;
+
+    animation: zoomIn 1.8s ease-in forwards;
+    animation-delay: 3.5s;
+}
+
+#context:hover span
+{
+    font-weight: 900;
+
+    text-shadow:
+    0 0 7px #fff,
+    0 0 28px #fff;
+
+}
+
+#create
+{
+    /* color: #c1fed6b7; */
+
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa;
+    /* 0 0 102px #0fa,
+    0 0 151px #0fa; */
+}
+
+#destroy
+{
+    /* color: #ffceccc4; */
+
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(255, 0, 55),
+    0 0 82px rgb(255, 0, 55),
+    0 0 92px rgb(255, 0, 55);
+    /* 0 0 102px rgb(255, 0, 55),
+    0 0 151px rgb(255, 0, 55); */
+}
+
+@keyframes slideUp 
+{
+    from {
+        transform: translate(0, 0) rotateX(1080deg);
+    }
+    to {
+        transform: translate(0, -125%) rotateX(0deg);
+    }
+}
+
+@keyframes slideDown
+{
+    from {
+        transform: translate(0, 0) rotateX(0deg);
+    }
+    to {
+        transform: translate(0, 175%) rotateX(1080deg);
+    }
+}
+
+@keyframes zoomIn
+{
+    from {
+        opacity: 0;
+        transform: translate(-50%, 50%) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 50%) scale(1);
+    }
+}
