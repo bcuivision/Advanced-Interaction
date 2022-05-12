@@ -1,0 +1,58 @@
+body
+{
+    margin: 0;
+}
+
+.slide 
+{
+    width: 100vw;
+    height: 100vh;
+
+    background-size: cover;
+    background-repeat: none;
+    /* filter: invert(100%); */
+}
+
+.wrapper 
+{
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+}
+
+.one 
+{
+    background-image: url("images/plastic.jpeg");
+}
+
+.two 
+{
+    background-image: url("images/fire.jpeg");
+}
+
+.three 
+{
+    background-image: url("images/ocean.jpeg");
+}
+
+.four 
+{
+    background-image: url("images/plastic2.jpeg");
+}
+
+.wrapper 
+{
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.outer-wrapper 
+{
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+}

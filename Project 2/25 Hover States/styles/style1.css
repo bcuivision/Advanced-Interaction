@@ -1,0 +1,168 @@
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.transitions
+{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid black;
+
+    transition: all 1s;
+}
+
+#t1:hover
+{
+    border-radius: 50%;
+}
+
+#t2:hover
+{
+    background-color: royalblue;
+}
+
+#t3:hover
+{
+    transform: rotateX(180deg);
+}
+
+#t4:hover
+{
+    transform: rotateY(180deg);
+}
+
+#t5:hover
+{
+    transform: rotateZ(180deg);
+}
+
+#t6:hover
+{
+    font-size: 35px;
+}
+
+#t7:hover a
+{
+    color: red;
+    text-decoration: none;
+}
+
+#t8:hover a
+{
+    font-family: 'Inter', sans-serif;
+}
+
+#t9:hover
+{
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    
+    border-bottom: 50px solid black;
+}
+
+#t10:hover a
+{
+    font-weight: bolder;
+}
+
+#t11:hover
+{
+    width: 150%;
+}
+
+#t12:hover
+{
+    height: 150%;
+}
+
+#t13:hover
+{
+    background-image:url("bcui.jpg");
+    background-size: 100%;
+}
+
+#t14:hover
+{
+    border: 10px dotted red;
+}
+
+#t15:hover
+{
+    box-shadow: 1px 1px 1px 25px rgba(0, 0, 255, .2);
+}
+
+#t16, #t17, #t18, #t19, #t20, #t21, #t22, #t23, #t24, #t25
+{
+    background-image:url("bcui.jpg");
+    background-size: 100%;
+}
+
+#t16:hover
+{
+    filter: invert(100%);
+}
+
+#t17:hover
+{
+    filter: contrast(200%);
+}
+
+#t18:hover
+{
+    filter: grayscale(80%);
+}
+
+#t19:hover
+{
+    filter: hue-rotate(90deg);
+}
+
+#t20:hover
+{
+    filter: blur(5px);
+}
+
+#t21:hover
+{
+    filter: saturate(300%);
+}
+
+#t22:hover
+{
+    filter: opacity(50%);
+}
+
+#t23:hover
+{
+    filter: sepia(60%);
+}
+
+#t24:hover
+{
+    filter: drop-shadow(16px 1px 16px red)
+}
+
+#t25:hover
+{
+    background-image:url("postcard.png");
+
+}
+
+
+
+
+
+
+a
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
