@@ -4,8 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <link href="styles.css" rel="stylesheet">
-	<title>Project 3</title>
+	<title>Project 3 Final</title>
 </head>
   
 <body>
@@ -14,11 +15,7 @@
         <a href="#home" onclick="reload()">HOME</a>
 
         <div class="dropdown-container">
-            <a id="bl" href="#barelife">BARELIFE</a>
-
-            <!-- <img src="dropdown.png" alt="arrow"> -->
-
-            <!-- down arrow icon -->
+            <span id="bl" >BARELIFE</span>
 
             <div id="bldropdown" class="dropdown">
                 <a href="#blintro">intro</a>
@@ -29,152 +26,256 @@
         </div>
 
         <div class="dropdown-container">
-            <a id="rp" class="section" href="#rupture">RUPTURE</a>
-
-            <!-- down arrow icon -->
+            <span id="rp">RUPTURE</span>
 
             <div id="rpdropdown" class="dropdown">
                 <a href="#intro">intro</a>
-                <a href="#thruName">through</a>
-                <a href="#urnName">dropping a han dynasty urn</a>
-                <a href="#shanghaiName">souvenir from shanghai</a>
+                <a href="#thru">through</a>
+                <a href="#urn">dropping a han dynasty urn</a>
+                <a href="#shanghai">souvenir from shanghai</a>
             </div>
         </div>
         
-        <a href="#about">ABOUT</a>
+        <span id="aboutPage" onclick="transitionToAbout()">ABOUT</span>
     </div>
 
-    <section id="home" class="panel">
+    <div class="container">
+        <section id="barelife" class="panel">
 
-        <h2 class="titleType">AI WEIWEI:</h2>
+            <div class="dashLines"></div>
 
-        <div id="date">September 28, 2019 - January 5, 2020</div>
-        
-        <div id="leftArrow">
-            <div id="barelifeArrow" class="marquee3k scroll" data-speed="1" data-reverse = "false" data-pausable="true">
-                <span>BARELIFE</span>
-            </div>
-            <div class="triangle-left"></div>
-        </div>
+            <div id="barelifeSidebar" class="sidebar">
+                <h2 class="sectionTitle1">BARE</h2>
+                <h2 class="sectionTitle2">LIFE</h2>
 
-        <div id="rightArrow">
-            <div id="ruptureArrow" class="marquee3k scroll" data-speed="1" data-reverse = "true" data-pausable="true">
-                <span onclick="transitionToRupture(event)">RUPTURE</span>
-            </div>
-            <div onclick="transitionToRupture(event)" class="triangle-right"></div>
-        </div>
-
-        <div id="webFooter">
-            <div id="museum">Mildred Lane Kemper Art Museum</div>
-            <div class="line"></div>
-        </div>
-    </section>
-
-
-    <section id="rupture" class="panel">
-
-        <div class="sidebar">
-            <h2 class="sectionTitle1">RUP</h2>
-            <h2 class="sectionTitle2">TURE</h2>
-
-            <div class="overview">
-                <a href="#intro" onclick="selectSection(event)" class="subsection header">INTRO</a>
-                <a href="#thruName" onclick="selectSection(event)" class="subsection header">THROUGH(2007-8)</a>
-                <a href="#urnName" onclick="selectSection(event)" class="subsection header">DROPPING A HAN DYNASTY URN(2015)</a>
-                <a href="#shanghaiName" onclick="selectSection(event)" class="subsection header">SOUVENIR FROM SHANGHAI(2016)</a>
-            </div>
-        </div>
-
-        <div class="caroussel">
-            <div id="intro" class="intro">
-                <h3>INTRO</h3>
-                <p>
-                    Rupture, alludes to the German-Jewish philosopher Hannah Arendt's influential writings about modernity's break from tradition. Here, visitors will find artworks that represent Ai's creative engagement with China's cultural legacy, from the radical erasures of the Cultural Revolution (1966-76) to the rapid globalization and economic reforms that have marked the beginning of the 21st century.
-                </p>
-            </div>
-
-            <div class="artworks">
-                <div class="artpiece">
-                    <img src="./images/through.jpg" alt="through" class="portrait image">
-                    <span id="thruName" class="artname">Through (2007-8)</span>
+                <div class="overview">
+                    <a href="#blintro" onclick="selectSection(event)" class="subsection header">INTRO</a>
+                    <a href="#bomb" onclick="selectSection(event)" class="subsection header">BOMBS (2019)</a>
+                    <a href="#odessey" onclick="selectSection(event)" class="subsection header">ODESSEY (2016)</a>
+                    <a href="#bicycle" onclick="selectSection(event)" class="subsection header">FOREVER BICYCLE (2012)</a>
                 </div>
 
-                <div class="artpiece">
-                    <img id="urn" src="./images/urn.jpg" alt="urn" class="landescape image" >
-                    <span id="urnName" class="artname">Dropping a Han Dynasty Urn (2015)</span>
+                <div id="barelifeSidebarBckgrnd" class="sidebarBackground"></div>
+            </div>
+
+            <div class="caroussel">
+                <div id="blintro" class="intro">
+                    <h3>INTRO</h3>
+                    <p>
+                        Encompassing artworks that elevate into the realm of visibility those whose humanity has been ignored, Bare Life takes its title from the writings of the Italian philosopher Giorgio Agamben, who has long examined the notion of bare, unprotected life and its manifestations throughout human history. In recent years, Agamben's ideas have gained new force as approximately 70 million people have been displaced from their homelands and deprived of basic human rights. 
+
+                    </p>
                 </div>
 
-                <div class="artpiece">
-                    <img id="shanghai" src="./images/souvenir.jpg" alt="souvenir" class="landescape image">
-                    <span id="shanghaiName" class="artname">Souvenir From Shanghai (2016)</span>
-                </div>
-            </div>
+                <div class="artpiece" id="bomb">
+                    <!-- <img src="./images/bombs2.jpg" alt="bombs" class="portrait image"> -->
 
-            <div class="ad">
-                <h3>SEE EVERYTHING</h3>
-                <p>Visit the Mildred Lane Kemper Art Meusem for the entire Ai Weiwei: Rupture exhibition. </p>
-                <button class="moreBtn">LEARN MORE</button>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="barelife" class="panel">
-        <h2 class="sectionTitle1">BARE</h2>
-        <h2 class="sectionTitle2">LIFE</h2>
-
-        <div class="overview">
-            <a href="#intro" onclick="selectSection(event)" class="subsection header">INTRO</a>
-            <a href="#through" onclick="selectSection(event)" class="subsection header">THROUGH(2007-8)</a>
-            <a href="#urn" onclick="selectSection(event)" class="subsection header">DROPPING A HAN DYNASTY URN(2015)</a>
-            <a href="#shanghai" onclick="selectSection(event)" class="subsection header">SOUVENIR FROM SHANGHAI(2016)</a>
-        </div>
-
-        <div class="caroussel">
-            <div class="intro">
-                <h3>INTRO</h3>
-                <p>
-                    Encompassing artworks that elevate into the realm of visibility those whose humanity has been ignored, Bare Life takes its title from the writings of the Italian philosopher Giorgio Agamben, who has long examined the notion of bare, unprotected life and its manifestations throughout human history. In recent years, Agamben's ideas have gained new force as approximately 70 million people have been displaced from their homelands and deprived of basic human rights. 
-
-                </p>
-            </div>
-
-            <div class="artworks">
-                <div class="artpiece">
-                    <img src="./images/bombs.jpg" alt="bombs" class="portrait image">
+                    <div
+                        class="portrait image" 
+                        data-repetition data-repetition-elems="5" 
+                        data-repetition-stagger="-0.15" 
+                        data-repetition-initial-scale="1.05" 
+                        data-repetition-duration="0.5" 
+                        data-repetition-ease="power1.inOut" 
+                        style="background-image:url('images/bombs2.jpg');">
+                    </div>
+                    
                     <span id="bombName" class="artname">Bombs (2019)</span>
                 </div>
 
-                <div class="artpiece">
-                    <img id="odessey" src="./images/odessey.jpg" alt="odessey" class="landescape image" >
+                <div class="artpiece" >
+                    <!-- <img id="odessey" src="./images/odessey2.jpg" alt="odessey" class="landescape image" > -->
+
+                    <div
+                        id="odessey"
+                        class="landescape image" 
+                        data-repetition data-repetition-elems="5" 
+                        data-repetition-stagger="-0.15" 
+                        data-repetition-initial-scale="1.05" 
+                        data-repetition-duration="0.5" 
+                        data-repetition-ease="power1.inOut"  
+                        style="background-image:url('images/odessey2.jpg');">
+                    </div>
+
+
                     <span id="odessetName" class="artname">Odessey (2016)</span>
                 </div>
 
                 <div class="artpiece">
-                    <img id="bicycle" src="./images/bicycle.jpg" alt="bicycle" class="landescape image">
+                    <!-- <img id="bicycle" src="./images/bicycle.jpg" alt="bicycle" class="landescape image"> -->
+
+                    <div
+                        id="bicycle"
+                        class="landescape image" 
+                        data-repetition data-repetition-elems="5" 
+                        data-repetition-stagger="-0.15" 
+                        data-repetition-initial-scale="1.05" 
+                        data-repetition-duration="0.5" 
+                        data-repetition-ease="power1.inOut" 
+                        style="background-image:url('images/bicycle.jpg');">
+                    </div>
+
+                    
                     <span id="bicycleName" class="artname">Forever bicycle (2012)</span>
+                </div>
+
+                <div class="ad">
+                    <h3>SEE EVERYTHING</h3>
+                    <p>Visit the Mildred Lane Kemper Art Meusem for the entire Ai Weiwei: Rupture exhibition. </p>
+                    <button class="moreBtn" onclick="learnMore()">LEARN MORE</button>
                 </div>
             </div>
 
-            <div class="ad">
-                <h3>SEE EVERYTHING</h3>
-                <p>Visit the Mildred Lane Kemper Art Meusem for the entire Ai Weiwei: Rupture exhibition. </p>
-                <button class="moreBtn">LEARN MORE</button>
+        </section>
+
+        <section id="home" class="panel">
+
+            <section id="about" class="panel">
+
+                <h2 class="sectionTitle1 left1">AB</h2>
+                <h2 class="sectionTitle2 left2">OUT</h2>
+    
+                <div id="content">
+                    <h3>EXHIBITION INTRO</h3>
+    
+                    <p>Organized into two thematic sections(<span class="link" onclick="transitionToBarelife()">BARELIFE</span> & <span class="link" onclick="transitionToRupture()">RUPTURE</span>),  the exhibition features more than 35 artworks created over the last two decades in a wide variety of mediums—among them sculptures, installations, photographs, and films. A selection of newly conceived large-scale and site-specific projects are placed in dialogue with some of Ai's most iconic works and several major artworks never before exhibited in the United States.</p>
+                </div>
+    
+                <div id="aboutDivider"></div>
+            </section>
+
+            <h2 class="titleType">AI WEIWEI:</h2>
+
+            <div id="date">September 28, 2019 - January 5, 2020</div>
+            
+            <div id="arrows">
+                <div id="leftArrow">
+                    <div onclick="transitionToBarelife()" class="triangle-left"></div>
+                    <div id="barelifeArrow" class="marquee3k scroll" data-speed="1" data-reverse = "false" data-pausable="true">
+                        <span onclick="transitionToBarelife()" >BARELIFE</span>
+                    </div>
+                </div>
+
+                <div id="rightArrow">
+                    <div id="ruptureArrow" class="marquee3k scroll" data-speed="1" data-reverse = "true" data-pausable="true">
+                        <span onclick="transitionToRupture()">RUPTURE</span>
+                    </div>
+                    <div onclick="transitionToRupture()" class="triangle-right"></div>
+                </div>
             </div>
-        </div>
 
-    </section>
+            <div id="webFooter">
+                <div id="museum">Mildred Lane Kemper Art Museum</div>
+                <div class="line"></div>
+            </div>
 
-    <!-- draggable="true" -->
-    <div id="divider" style="left:833px;"></div>
+            <div id="divider"></div>
+        </section>
+
+        <section id="rupture" class="panel">
+
+            <div class="dashLines"></div>
+
+            <div id="ruptureSidebar" class="sidebar">
+
+                <h2 class="sectionTitle1">RUP</h2>
+                <h2 class="sectionTitle2">TURE</h2>
+    
+                <div class="overview">
+                    <a href="#intro" onclick="selectSection(event)" class="subsection header">INTRO</a>
+                    <a href="#thru" onclick="selectSection(event)" class="subsection header">THROUGH(2007-8)</a>
+                    <a href="#urn" onclick="selectSection(event)" class="subsection header">DROPPING A HAN DYNASTY URN(2015)</a>
+                    <a href="#shanghai" onclick="selectSection(event)" class="subsection header">SOUVENIR FROM SHANGHAI(2016)</a>
+                </div>
+
+                <div id="ruptureSidebarBckgrnd" class="sidebarBackground"></div>
+            </div>
+    
+            <div class="caroussel">
+                <div id="intro" class="intro">
+                    <h3>INTRO</h3>
+                    <p>
+                        Rupture, alludes to the German-Jewish philosopher Hannah Arendt's influential writings about modernity's break from tradition. Here, visitors will find artworks that represent Ai's creative engagement with China's cultural legacy, from the radical erasures of the Cultural Revolution (1966-76) to the rapid globalization and economic reforms that have marked the beginning of the 21st century.
+                    </p>
+                </div>
+    
+                <div class="artpiece">
+                    <!-- <img id="thru" src="./images/through.jpg" alt="through" class="portrait image"> -->
+
+                    <div
+                        id="thru"
+                        class="portrait image" 
+                        data-repetition data-repetition-elems="5" 
+                        data-repetition-stagger="-0.15" 
+                        data-repetition-initial-scale="1.05" 
+                        data-repetition-duration="0.5" 
+                        data-repetition-ease="power1.inOut"  
+                        style="background-image:url('images/through.jpg');">
+                    </div>
+
+                    <span id="thruName" class="artname">Through (2007-8)</span>
+                </div>
+
+                <div class="artpiece">
+                    <!-- <img id="urn" src="./images/urn.jpg" alt="urn" class="landescape image" > -->
+
+                    <div
+                        id="urn"
+                        class="landescape image" 
+                        data-repetition data-repetition-elems="5" 
+                        data-repetition-stagger="-0.15" 
+                        data-repetition-initial-scale="1.05" 
+                        data-repetition-duration="0.5" 
+                        data-repetition-ease="power1.inOut" 
+                        style="background-image:url('images/urn.jpg');">
+                    </div>
+
+                    <span id="urnName" class="artname">Dropping a Han Dynasty Urn (2015)</span>
+                </div>
+
+                <div class="artpiece">
+                    <!-- <img id="shanghai" src="./images/souvenir.jpg" alt="souvenir" class="landescape image"> -->
+
+                    <div
+                        id="shanghai"
+                        class="landescape image" 
+                        data-repetition data-repetition-elems="5" 
+                        data-repetition-stagger="-0.15" 
+                        data-repetition-initial-scale="1.05" 
+                        data-repetition-duration="0.5" 
+                        data-repetition-ease="power1.inOut" 
+                        style="background-image:url('images/souvenir.jpg');">
+                    </div>
+
+                    <span id="shanghaiName" class="artname">Souvenir From Shanghai (2016)</span>
+                </div>
+    
+                <div class="ad">
+                    <h3>SEE EVERYTHING</h3>
+                    <p>Visit the Mildred Lane Kemper Art Meusem for the entire Ai Weiwei: Rupture exhibition. </p>
+                    <button class="moreBtn" onclick="learnMore()">LEARN MORE</button>
+                </div>
+            </div>
+    
+        </section>
+
+    </div>
 
     <footer>
         <!-- gsap plugin -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Flip.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
         
         <script src="marquee3k.js"></script>
+        <script src="transitions.js"></script>
         <script src="script.js"></script>
+
+        <!-- images loaded library -->
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+        <script src="hover.js"></script>
+
     </footer>
 </body>
 </html>

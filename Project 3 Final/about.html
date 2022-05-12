@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link href="styles.css" rel="stylesheet">
+	<title>Project 3 with GSAP</title>
+</head>
+  
+<body>
+
+    <div class="navbar top" >
+        <a href="#home" onclick="reload()">HOME</a>
+
+        <div class="dropdown-container">
+            <span id="bl" >BARELIFE</span>
+
+            <div id="bldropdown" class="dropdown">
+                <a href="#blintro">intro</a>
+                <a href="#bombs">bombs</a>
+                <a href="#odessey">odessey</a>
+                <a href="#bicycle">forever bicycle</a>
+            </div>
+        </div>
+
+        <div class="dropdown-container">
+            <span id="rp">RUPTURE</span>
+
+            <div id="rpdropdown" class="dropdown">
+                <a href="#intro">intro</a>
+                <a href="#thru">through</a>
+                <a href="#urn">dropping a han dynasty urn</a>
+                <a href="#shanghai">souvenir from shanghai</a>
+            </div>
+        </div>
+        
+        <a href="about.html">ABOUT</a>
+    </div>
+
+    <div class="container">
+        <section id="about" class="panel">
+
+                <h2 class="sectionTitle1 left1">AB</h2>
+                <h2 class="sectionTitle2 left2">OUT</h2>
+    
+                <div id="content">
+                    <h3>EXHIBITION INTRO</h3>
+    
+                    <p>Organized into two thematic sections(<span class="link" onclick="transitionToBarelife()">BARELIFE</span> & <span class="link" onclick="transitionToRupture()">RUPTURE</span>),  the exhibition features more than 35 artworks created over the last two decades in a wide variety of mediums—among them sculptures, installations, photographs, and films. A selection of newly conceived large-scale and site-specific projects are placed in dialogue with some of Ai's most iconic works and several major artworks never before exhibited in the United States.</p>
+                </div>
+    
+                <div id="aboutDivider"></div>
+            </section>
+
+    </div>
+
+    <footer>
+        <!-- gsap plugin -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Flip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
+        
+        <script src="marquee3k.js"></script>
+        <script src="script.js"></script>
+        <!-- <script src="transitions.js"></script> -->
+
+        <!-- images loaded library -->
+        <!-- <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+        <script src="hover.js"></script> -->
+
+    </footer>
+</body>
+</html>
