@@ -20,6 +20,9 @@
 //   if (i < 10) {i = "0" + i};
 //   return i;
 // }
+
+new Audio('brick.mp3').play();
+new Audio('start.mp3').play();
   
 
 var boxes = document.getElementsByClassName("box");
